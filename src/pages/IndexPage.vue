@@ -1,6 +1,10 @@
 <template>
   <div>
-    <button-conter :contador="contador" @sumarContador="sumRes"></button-conter>
+    <button-conter
+      :contador="contador"
+      @sumarContador="sumRes"
+      :tittle="tittle"
+    ></button-conter>
     <h1>{{ contador }}</h1>
 
     <h1>------------------</h1>
@@ -13,6 +17,7 @@ import ButtonConter from "../components/ButtonConter.vue";
 
 const contador = ref(0);
 const active = false;
+const tittle = ref("sumar");
 const name = "Gabo";
 const fruta = {
   name: "manzana",
